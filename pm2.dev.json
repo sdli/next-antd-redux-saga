@@ -1,0 +1,37 @@
+[
+  {
+    "项目名称": "",
+    "name": "project-dev",
+
+    "脚本目录": "",
+    "script": "./server/index.js",
+
+    "错误日志": "",
+    "error_file": "./pm2/error_log/server.log",
+
+    "启动日志": "",
+    "log_file": "./pm2/start_log/combined.outer.log",
+
+    "项目输出日志": "",
+    "out_file": "./pm2/output_log/out.log",
+
+    "日志格式": "",
+    "log_type": "json",
+
+    "是否合并日志": "",
+    "merge": true,
+
+    "环境配置": "",
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": 8001
+    },
+
+    "watch": [".next", "server"],
+
+    "实例个数": "",
+    "instances": "4",
+
+    "_link": "http://pm2.keymetrics.io/docs/usage/log-management/#json-way"
+  }
+]
