@@ -82,8 +82,6 @@ export default (services: any, baseModal: Record<string, any>) => {
     },
 
     * commonRequest({ payload }, { put }) {
-
-      console.log('common request');
       
       const {
         service, save, extraSave, param, serviceGroup, successMessage, next, callback

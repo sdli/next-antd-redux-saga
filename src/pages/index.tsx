@@ -57,7 +57,6 @@ class homePage extends React.Component<any, any> {
     render() {
         const { appInfo, date, locale } = this.props;
 
-        console.log(locale);
         return <Layout tab="index">
             <WingBlank size="lg">
                 <WhiteSpace size="lg" />

@@ -211,15 +211,9 @@ function createApp({ initialState, req, isServer }: StoreOptions, models: ModelC
   /**
    * 将store和provider渲染至dom
    */
-  // if (req || !isServer) {
-
-  console.log('init store');
-  store.sagaTask = store.sagaTask ? store.sagaTask : SagaMiddleware.run(rootSaga);
-  // } else {
-  //   console.log('init store without sagaTask');
-  // }
-
-  // console.log('effects', modelEffects.length, options);
+  if (req || !isServer) {
+    store.sagaTask = store.sagaTask ? store.sagaTask : SagaMiddleware.run(rootSaga);
+  }
 
   return store;
 }
