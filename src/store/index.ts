@@ -1,8 +1,8 @@
+import { connect, Provider } from 'react-redux';
 import createApp, { getInitialState } from './modelToStore';
 import serviceHelper from './serviceHelper';
-import request from "./request";
-import modelWithRequest from "./model.utils";
-import { connect, Provider } from 'react-redux';
+import request from './request';
+import modelWithRequest from './model.utils';
 import isServer from './isServer';
 import router from './router';
 import Link from './link';

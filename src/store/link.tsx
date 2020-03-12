@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { getRealUrl } from './router';
 
 const LinkComp = ({ href, children, ...rest }) => {
-    const realUrl = getRealUrl(href);
+  const realUrl = getRealUrl(href);
 
-    return <Link href={realUrl} {...rest}>
-        {children}
+  return (
+    <Link href={realUrl} {...rest}>
+      {children}
     </Link>
+  );
 };
 
 export default LinkComp;

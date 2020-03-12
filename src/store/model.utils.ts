@@ -82,7 +82,7 @@ export default (services: any, baseModal: Record<string, any>) => {
     },
 
     * commonRequest({ payload }, { put }) {
-      
+
       const {
         service, save, extraSave, param, serviceGroup, successMessage, next, callback
       } = payload;
@@ -145,8 +145,8 @@ export default (services: any, baseModal: Record<string, any>) => {
                     [save]: data[0] && 'data' in data[0] ? data[0].data : data[0],
                     ...extra
                   } : {
-                      ...extra
-                    }
+                    ...extra
+                  }
                 });
               }
 

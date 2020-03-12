@@ -6,7 +6,9 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 // saga工具
 import createSagaMiddleware from 'redux-saga';
-import { put, select, all, takeEvery, takeLatest } from 'redux-saga/effects';
+import {
+  put, select, all, takeEvery
+} from 'redux-saga/effects';
 import getSagaEffects from './getSagaEffects';
 
 // model数据结构
@@ -121,7 +123,7 @@ function pushGeneratorArray(model: ModelContentType, dispatch: Function, effects
       effects.push(takeEvery(effectName, function* (action) {
         const routing = yield select(state => state.routing);
         yield effect[1](action, { ...getSagaEffects(model), query: routing });
-      }))
+      }));
     });
   }
 
@@ -217,5 +219,5 @@ function createApp({ initialState, req, isServer }: StoreOptions, models: ModelC
 
   return store;
 }
-export { getInitialState }
+export { getInitialState };
 export default createApp;

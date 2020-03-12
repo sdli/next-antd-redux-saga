@@ -1,4 +1,4 @@
-import { serviceHelper } from "store/index";
+import { serviceHelper } from 'store/index';
 
 const appConfig = {
   namespace: 'app',

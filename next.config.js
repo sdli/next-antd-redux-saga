@@ -100,6 +100,25 @@ module.exports = withBundleAnalyzer(withLess({
             });
         }
 
+        if (dev) {
+            if (!config.module.rules.some((v) => v.loader === 'eslint-loader')) {
+                config.module.rules.unshift({
+                    test: /\.(js|jsx|ts|tsx)$/,
+                    use: [
+                        {
+                            loader: require.resolve('eslint-loader'),
+                            options: {
+                                formatter: require.resolve('react-dev-utils/eslintFormatter'),
+                                eslintPath: require.resolve('eslint'),
+                                configFile: resolvePath('.eslintrc.js')
+                            }
+                        },],
+                    exclude: [/node_modules/, /.next/, /out/],
+                    enforce: 'pre',
+                });
+            }
+        }
+
         config.resolve.alias = {
             ...(config.resolve.alias || {}),
             'components': resolvePath('./src/components'),

@@ -1,0 +1,7 @@
+build/*.js
+config/*.js
+server/*.js
+node_modules
+scripts/*.js
+public/*.js
+next.config.js

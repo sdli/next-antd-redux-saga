@@ -5,19 +5,19 @@ import { modelWithRequest } from 'store';
 // 通过调用dispatch({type: 'app/commonRequest', payload: {service: 'app/getData', param:"", *callback(){}}})
 // 来进行请求，当然，你也可以直接使用request
 export default modelWithRequest(services, {
-    namespace: 'app',
+  namespace: 'app',
 
-    state: {
-        appInfo: {
-            name: '',
-            version: ''
-        },
-        date: ''
+  state: {
+    appInfo: {
+      name: '',
+      version: ''
     },
+    date: ''
+  },
 
-    reducers: {
-    },
+  reducers: {
+  },
 
-    effects: {
-    }
+  effects: {
+  }
 });

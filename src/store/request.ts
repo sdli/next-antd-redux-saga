@@ -4,8 +4,8 @@ import axios from 'axios';
 import * as fetchJsonp from 'fetch-jsonp';
 import { compile, parse } from 'path-to-regexp';
 // import { stringify } from 'qs';
-import isServer from "./isServer";
 import config from 'configs';
+import isServer from './isServer';
 
 let timer = null;
 const YQL = [];
@@ -27,8 +27,8 @@ const fetch = (options: Options) => {
   } = options;
   let { url, data } = options;
 
-  const cloneData = data 
-    ? (Object.prototype.toString.call(data) === '[object Object]' ? { ...data } : [...data]) 
+  const cloneData = data
+    ? (Object.prototype.toString.call(data) === '[object Object]' ? { ...data } : [...data])
     : null;
 
   // 请求默认添加token参数
@@ -117,13 +117,12 @@ export default function request(options: Options) {
     ...options,
 
     // 如果为服务端则自动匹配请求头为localhost
-    url: isServer() && !(fetchType === "JSONP") ? `http://localhost:${config.port}${options.url}` : options.url
+    url: isServer() && !(fetchType === 'JSONP') ? `http://localhost:${config.port}${options.url}` : options.url
   };
 
   if (options.url && options.url.indexOf('//') > -1) {
     const origin = `${options.url.split('//')[0]}//${
-      options.url.split('//')[1].split('/')[0]
-      }`;
+      options.url.split('//')[1].split('/')[0]}`;
 
     if (window.location.origin !== origin && !options.fetchType) {
       if (CORS && CORS.indexOf(origin) > -1) {
@@ -230,7 +229,7 @@ export default function request(options: Options) {
       if (timer) {
         clearTimeout(timer);
       }
-      
+
       timer = setTimeout(() => {
         if (!isServer()) Message.fail(msg);
       }, 500);

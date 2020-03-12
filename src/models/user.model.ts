@@ -1,22 +1,22 @@
 import { modelWithRequest } from 'store';
 
 export default modelWithRequest(
-    // serivces
-    {},
+  // serivces
+  {},
 
-    // model
-    {
-        namespace: 'user',
+  // model
+  {
+    namespace: 'user',
 
-        state: {
-            user: {
-                name: '',
-            },
-        },
+    state: {
+      user: {
+        name: '',
+      },
+    },
 
-        reducers: {
-        },
+    reducers: {
+    },
 
-        effects: {
-        }
-    });
+    effects: {
+    }
+  });
