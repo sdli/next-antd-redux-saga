@@ -150,6 +150,14 @@ const imgComp = () => <img src="/icon/logo.svg" />;
 
 在 languages 中定义即可。如需增加新的语言可以在`pages/_app.js`中直接引用，并修改`store/Link.tsx`和`store.router.tsx`组件的跳转规则。
 
+国际化使用
+
+```js
+import intl from 'react-intl-universal';
+
+intl.get('name');
+```
+
 ## 项目部署
 
 #### 1. 项目部署工具-docker
