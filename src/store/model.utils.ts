@@ -41,9 +41,9 @@ export default (services: any, baseModal: Record<string, any>) => {
       if (serviceGroup) {
         serviceGroup.forEach((v: any) => {
           if (type === 'delete') {
-            loading[service] = false;
+            loading[v.service] = false;
           } else {
-            loading[service] = true;
+            loading[v.service] = true;
           }
         });
       }
@@ -144,9 +144,10 @@ export default (services: any, baseModal: Record<string, any>) => {
                   payload: data[0] && 'data' in data[0] && data[0].data ? {
                     [save]: data[0] && 'data' in data[0] ? data[0].data : data[0],
                     ...extra
-                  } : {
-                    ...extra
                   }
+                    : {
+                      ...extra
+                    }
                 });
               }
 
