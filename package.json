@@ -92,7 +92,7 @@
         "null-loader": "^3.0.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "pm2": "^4.2.1",
-        "react-dev-utils": "^10.0.0",
+        "react-dev-utils": "^11.0.4",
         "react-intl-universal": "^2.2.2",
         "redux-devtools-extension": "^2.13.8",
         "style-loader": "^1.1.3",
